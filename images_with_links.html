@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Teams - Mobile View</title>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+        }
+        .title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            color: white;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            width: 100%;
+            max-width: 600px;
+        }
+        .team {
+            border: 2px solid black;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #f9f9f9;
+            text-decoration: none; /* Remove underline from links */
+        }
+        .team img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+        .team-name {
+            font-weight: bold;
+            color: black;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">Courtsiide</div>
+    <div class="container">
+        <!-- NBA Teams -->
+        <script>
+            const teams = [
+                { name: "Atlanta Hawks", url: "hawks_xvbrqh.png", link: "https://www.nba.com/hawks" },
+                { name: "Boston Celtics", url: "celtics_rwvoe1.png", link: "https://www.nba.com/celtics" },
+                { name: "Brooklyn Nets", url: "nets_nbvnce.png", link: "https://www.nba.com/nets" },
+                { name: "Charlotte Hornets", url: "hornets_mjup3u.png", link: "https://www.nba.com/hornets" },
+                { name: "Chicago Bulls", url: "bulls_eiarkk.png", link: "https://www.nba.com/bulls" },
+                { name: "Cleveland Cavaliers", url: "cavs_t5tqfu.png", link: "https://www.nba.com/cavaliers" },
+                { name: "Dallas Mavericks", url: "mavs_rth9bi.png", link: "https://www.nba.com/mavericks" },
+                { name: "Denver Nuggets", url: "nuggets_ccjnzh.png", link: "https://www.nba.com/nuggets" },
+                { name: "Detroit Pistons", url: "pistons_dgdm9u.png", link: "https://www.nba.com/pistons" },
+                { name: "Golden State Warriors", url: "war_mqhoub.png", link: "https://www.nba.com/warriors" },
+                { name: "Houston Rockets", url: "rockets_qrynem.png", link: "https://www.nba.com/rockets" },
+                { name: "Indiana Pacers", url: "pacers_j4rkyp.png", link: "https://www.nba.com/pacers" },
+                { name: "LA Clippers", url: "clip_uqxwyg.png", link: "https://www.nba.com/clippers" },
+                { name: "Los Angeles Lakers", url: "lakers_zamits.png", link: "https://www.nba.com/lakers" },
+                { name: "Memphis Grizzlies", url: "grizz_yowbj6.png", link: "https://www.nba.com/grizzlies" },
+                { name: "Miami Heat", url: "heat_zhv6rc.png", link: "https://www.nba.com/heat" },
+                { name: "Milwaukee Bucks", url: "bucks_livsv8.png", link: "https://www.nba.com/bucks" },
+                { name: "Minnesota Timberwolves", url: "wolf_dftpil.png", link: "https://www.nba.com/timberwolves" },
+                { name: "New Orleans Pelicans", url: "pelicans_f7yfwq.png", link: "https://www.nba.com/pelicans" },
+                { name: "New York Knicks", url: "knicks_gneojp.png", link: "https://www.nba.com/knicks" },
+                { name: "Oklahoma City Thunder", url: "okc_tdhc1y.png", link: "https://www.nba.com/thunder" },
+                { name: "Orlando Magic", url: "magic_wqxdt8.png", link: "https://www.nba.com/magic" },
+                { name: "Philadelphia 76ers", url: "76ers_qjtxql.png", link: "https://www.nba.com/sixers" },
+                { name: "Phoenix Suns", url: "suns_gcws05.png", link: "https://www.nba.com/suns" },
+                { name: "Portland Trail Blazers", url: "blaze_bw9xhz.png", link: "https://www.nba.com/blazers" },
+                { name: "Sacramento Kings", url: "kings_u4izeb.png", link: "https://www.nba.com/kings" },
+                { name: "San Antonio Spurs", url: "spurs_irjjao.png", link: "https://www.nba.com/spurs" },
+                { name: "Toronto Raptors", url: "raptors_uo9mli.png", link: "https://www.nba.com/raptors" },
+                { name: "Utah Jazz", url: "jazz_hu5gxd.png", link: "https://www.nba.com/jazz" },
+                { name: "Washington Wizards", url: "wizards_kg8mu4.png", link: "https://www.nba.com/wizards" }
+            ];
+
+            const container = document.querySelector(".container");
+            teams.forEach(team => {
+                const a = document.createElement("a");
+                a.href = team.link;
+                a.className = "team";
+                a.innerHTML = `
+                    <img src="https://res.cloudinary.com/dh8qsxbuy/image/upload/v1741637136/${team.url}" alt="${team.name} Logo">
+                    <div class="team-name">${team.name}</div>
+                `;
+                container.appendChild(a);
+            });
+        </script>
+    </div>
+</body>
+</html>
