@@ -1,0 +1,69 @@
+body{
+     
+    background-color: rgba(0,0,0,.5);
+    background:rgba(0,0,0,0.8) url("/Users/jonathanburgos/Desktop/HTML/Images/bg.jpg");
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    height: 100vh;
+
+}
+
+.bar{
+    float: right;
+    list-style: none;
+    margin-top: 20px;
+    padding-right: 10px;
+}
+
+.bar li {
+    display: inline-block;
+}
+.bar li a{
+    color: white;
+    text-decoration: none;
+    padding:6px 20px;
+    font-size: 18px;
+}
+
+.bar li a:hover{
+    bakground: white;
+    color: grey;
+}
+
+.logo img {
+    width: 175px;
+    float:left;
+    padding-left: 5%;
+    padding-top: 5%;
+}
+
+.welcome-page{
+    position: absolute;
+    margin: 20% 30%;
+    text-align: center;
+
+}
+
+.welcome-page h1{
+    text-align: center;
+    color: white;
+    font-size: 50;
+
+}
+.welcome-page a:hover{
+    color: grey;
+
+}
+.welcome-page a{
+    font-size: 15px;
+    margin-top: 20px;
+    color: white;
+    display: inline-block;
+    border: 2px solid;
+    padding: 5px ;
+}
+
+.welcome-page{
+    color: darkorange ;
+}
